@@ -25,7 +25,10 @@ export class LoginPageComponent implements OnInit {
  
   ngOnInit(){  
   }
-
+  
+   /* This method is called when clicking on login button.
+     if email and password is matched, successfully navigates to studemt list page.
+     Else, shows Invalid login message.*/
   checkLogin() {
 
     if (this.loginservice.authenticate(this.email, this.password)
