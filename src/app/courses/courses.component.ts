@@ -18,7 +18,7 @@ export class CoursesComponent implements OnInit {
 
     
   }
-
+  /* This method is called from html page to get the truthy value of lower grade */
   checkLowerGrade():boolean{
     if(this.lowGrade == 'true'){
       this.isLowerGrade = true;
