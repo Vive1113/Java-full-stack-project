@@ -16,7 +16,9 @@ export class LogoutPageComponent  implements OnInit {
 
   }
 
- 
+  // whenever log out button pressed from any page, naviagtes to this component.
+  // first executes ngOnit method and logout method in authentication service class is called.
+
 ngOnInit():  void {
     this.authentocationService.logOut();
     this.router.navigate(['logout-page']);
