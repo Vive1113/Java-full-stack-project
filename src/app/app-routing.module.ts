@@ -1,3 +1,6 @@
+
+/* Paths for all the components created in this project is specified in this routing module */
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { StudentListComponent } from './student-list/student-list.component';
