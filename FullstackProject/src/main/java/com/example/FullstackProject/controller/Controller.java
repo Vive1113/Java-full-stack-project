@@ -35,7 +35,10 @@ public class Controller {
 	@Autowired
 	private Repository repository;
 	
-	// get all Students
+	/* By using get mapping annotation, transfer data from client to server in HTTP protocol.
+	 * It is used to get a single or multiple resources
+	 * It carries request parameter appended in URL string 
+	 * If a parameter requested is passed, it works and responds with the respective result. */
 	@GetMapping("/students")
 	public ResponseEntity<List<Student>> getAllStudents(@RequestParam(required = false) String name){
 		
