@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   templateUrl: './student-list.component.html',
   styleUrls: ['./student-list.component.css']
 })
+
+//this component class is accessed by its template to display the list of data of students maintained.
 export class StudentListComponent implements OnInit {
 
   firstName : String = '';
