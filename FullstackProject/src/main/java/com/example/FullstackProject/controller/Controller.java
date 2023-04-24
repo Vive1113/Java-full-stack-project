@@ -58,7 +58,9 @@ public class Controller {
 	}
 			
 	
-	// create Student rest api
+	/* By using post mapping annotation, transfer data from client to server in HTTP protocol.
+	 * POST carries request parameter in message body which makes it more secure
+	 * way of transferring data from client to server.*/
 	@PostMapping("/students")
 	public Student createStudent(@RequestBody Student student) {
 		return repository.save(student);
