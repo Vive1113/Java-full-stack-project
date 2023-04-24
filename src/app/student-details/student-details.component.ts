@@ -8,6 +8,8 @@ import { StudentService } from '../student.service';
   templateUrl: './student-details.component.html',
   styleUrls: ['./student-details.component.css']
 })
+
+//component class to display the student data of particular student
 export class StudentDetailsComponent implements OnInit {
 
   id: number = 0;
