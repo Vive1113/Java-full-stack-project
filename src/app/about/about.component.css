@@ -1,0 +1,23 @@
+/* .image{
+  width: 60%;
+  height: 65%;
+  right: 50%;
+  left: 50%;
+}
+.image{
+position: absolute;
+  top: 65%;
+  left: 55%;
+  bottom: 50%;
+  transform: translate(-53%, -50%);
+  width: 25rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  background:linear-gradient(to right, #bd7ea88a 0%, rgb(183, 60, 148) 100%);
+  border-radius: 0.225rem;
+  border-style: inset;
+  box-shadow: 5px 5px 10px #0a0000;
+} */
+.content{
+  margin-left: 25%;
+ }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="firstName" placeholder="Search by Student" [(ngModel)] = "firstName" />
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" (click)="searchByName()"><i class="fa fa-search"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+</div><br>
+<!--<button (click) = "fetchGrade()" >Fetch Student By Grade </button>-->
+<div class="filterByGrade">
+    <form>
+        <label id="filter">
+            Filter by Grade :
+        </label> &nbsp; &nbsp;
+    
+<select (change)="fetchByStandard($event)" name="gradeValue" id="dropdown" [(ngModel)]="gradeValue">
+    <option value="0" selected disabled>Select Grade</option>
+    <option value="6">Grade 6</option>
+    <option value="7">Grade 7</option>
+    <option value="8">Grade 8</option>
+    <option value="9">Grade 9</option>
+    <option value="10">Grade 10</option>
+    <option value="11">Grade 11</option>
+    <option value="12">Grade 12</option>
+</select>
+</form>
+</div>
+<h2> Student List</h2>
+
+<table class = "table table-striped">
+    <thead>
+        <tr style=" color: #fff;;
+        font-size: 21px;justify-content: center;">
+           
+            <th> Student Name</th>
+            <th> Standard </th>
+            <th> Contact No </th>
+            <th> City </th>
+            <th> Gender </th>
+            <th> DOB </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students" style="font-weight: bold; font-size: small;">
+            <td> {{ student.studentName }} </td>
+            <td> {{ student.standard }} </td>
+            <td> {{ student.contactNo }} </td>
+            <td> {{ student.city }} </td>
+            <td> {{ student.gender }} </td>
+            <td> {{ student.dateOfBirth }} </td>
+            <td><button (click) = "confirmUpdate(student)" class = "btn btn-info" style="margin-left: 10px; font-weight: bold; font-style: oblique;"><i class="fa fa-refresh"></i> Update</button>
+                <!--<button (click) = "updateStudent(student.id)" class = "btn btn-info" style="font-style: oblique;font-weight:bold;"> Update</button>-->
+                <button class = "btn btn-success" (click)="viewCourse(student)" style="font-style: oblique;margin-left: 10px;font-weight:bold;color: black;"><i class="fa fa-book"></i> Courses</button>
+                <button (click) = "confirmDelete(student)" class = "btn btn-danger" style="margin-left: 10px; font-weight: bold; font-style: oblique;"><i class="fa fa-trash"></i> Delete</button>
+                <button (click) = "studentDetails(student.id)" class = "btn btn-info" style="font-style: oblique;margin-left: 10px;font-weight:bold"><i class="fa fa-eye"></i> View</button>
+            </td>
+        </tr>
+        <tr *ngIf="students.length !== 0">
+            <button class="m-3 btn btn-danger btn-sm active" (click)="removeAllStudents()">
+                Remove All 
+            </button>
+        
+         <a href="students" class="m-3 btn btn-secondary btn-sm active">Back</a>
+        
+         </tr>
+        <tr scope="row" *ngIf="students.length === 0">
+            <td colspan="4"  style="color: darkred;" class="text-center"> No Record Found !! </td>
+
+        </tr>
+    </tbody>
+</table>

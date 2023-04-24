@@ -1,0 +1,114 @@
+ <p>Courses</p>
+<!--<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Grades
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" >6 to 10</a></li>
+      <li><a class="dropdown-item" >11 to 12</a></li>
+      
+    </ul>
+  </div> -->
+
+
+<div class="d-flex flex-row bd-highlight mb-3" id="lowerGrade" *ngIf = "checkLowerGrade()">
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+        <div class="card" style="width: 18rem;">
+            <img src=".\assets\science2.jpg" class="card-img-top" alt="..." width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title" style="color: red;">Science</h5>
+              <p class="card-text">Science is Scientific, Comprehensive, Investigative and Exploration of Natural and Chemical Environmental effects.</p>
+              <label for="ScienceTeacher" style="color: rgb(23, 183, 23); font-size: 15px; font-weight: bold;">Staff : </label> &nbsp;
+              <span class="card-text" id="ScienceTeacher">Mrs. R.Sujatha, M.sc.,M.Ed.</span>
+            </div>
+          </div>
+    </label>
+  </div> 
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+        <div class="card" style="width: 18rem;">
+            <img src=".\assets\maths2.webp" class="card-img-top" alt="..." width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title" style="color: red;">Mathematics</h5>
+              <p class="card-text">Mathematics is the basic stepstone for all the following professional learnings. From Science to Space, it serves the practical explanation.</p>
+             <label for="MathTeacher" style="color: rgb(23, 183, 23); font-size: 15px; font-weight: bold;">Staff : </label> &nbsp;
+             <span class="card-text" id="MathTeacher">Mrs. M.Vidhya, M.sc.,B.Ed.</span>
+            </div>
+          </div>
+    </label>
+  </div>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+        <div class="card" style="width: 18rem;">
+            <img src=".\assets\social4.avif" class="card-img-top" alt="..." width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title"  style="color: red;">Social Studies</h5>
+              <p class="card-text">Social is the subject of learning and exploring historical events, geographical values, civil laws and economical status of a country.</p>
+              <label for="SocialTeacher" style="color: rgb(23, 183, 23); font-size: 15px; font-weight: bold;">Staff : </label> &nbsp;
+             <span class="card-text" id="SocialTeacher">Mr. R.Kumar, M.sc.,Ph.D.</span>
+            </div>
+          </div>
+    </label>
+  </div>
+</div>
+
+<div class="d-flex flex-row bd-highlight mb-3" id="higherGrade" *ngIf = "!checkLowerGrade()">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+        <div class="card" style="width: 18rem;">
+            <img src=".\assets\biology2.avif" class="card-img-top" alt="..." width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title"  style="color: red;">Bio-Maths</h5>
+              <p class="card-text">This course ia complete package course of major subjects of Bio-Maths group, covering Maths-Physics-Chemistry-Biology.</p>
+              <label for="BioTeacher" style="color: rgb(23, 183, 23); font-size: 15px; font-weight: bold;">Staff : </label> &nbsp;
+             <span class="card-text" id="BioTeacher">Mr.S.Krishna, M.sc.,M.Ed.</span>
+            </div>
+          </div>
+    </label>
+  </div>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+        <div class="card" style="width: 18rem;">
+            <img src=".\assets\computer.jpg" class="card-img-top" alt="..." width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title"  style="color: red;">Computer Science</h5>
+              <p class="card-text">This Course includes Computer Science, Physics, Chemistry and Mathematics trained by experienced handlers.</p>
+              <label for="ComputerTeacher" style="color: rgb(23, 183, 23); font-size: 15px; font-weight: bold;">Staff : </label> &nbsp;
+             <span class="card-text" id="ComputerTeacher">Prof. V.Karthik, B.Tech.,M.Ed.</span>
+            </div>
+          </div>
+    </label>
+  </div>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+    <label class="form-check-label" for="flexCheckChecked">
+        <div class="card" style="width: 18rem;">
+            <img src=".\assets\Commerce1.webp" class="card-img-top" alt="..." width="150" height="150">
+            <div class="card-body">
+              <h5 class="card-title"  style="color: red;">Commerce</h5>
+              <p class="card-text">Bundled package for commerce group includes finance, accounting, commerce and business-maths.Happy learning.</p>
+              <label for="CommerceTeacher" style="color: rgb(23, 183, 23); font-size: 15px; font-weight: bold;">Staff : </label> &nbsp;
+             <span class="card-text" id="CommerceTeacher">Prof. D.Nisha, M.sc.,Ph.D.</span>
+            </div>
+          </div>
+    </label>
+  </div>
+</div>

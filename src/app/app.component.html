@@ -1,0 +1,80 @@
+<!---<a href="#" class="logo"><img [src]=".\assets\logo.jpg" style="width:60px;height: 50px;"></a>
+<span class="text-left heading" style = "color:aliceblue(20,20,20);">{{title}}</span>
+
+<div class="topnavbar">
+  <a class="btn btn-2" href="home-page"><i class="fa-solid fa-house"></i>Home</a>
+  <a class="btn btn-2" href="about page"><i class="fa-solid fa-address-card"></i>About Us</a>
+  <a class="btn btn-2" href="profile-card"><i class="fa-solid fa-user"></i>Profile</a>
+  <a class="btn btn-2" href="contact-page"><i class="fa-solid fa-square-phone"></i>Contact</a>
+  <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" routerLink="/students" class="nav-link" >Student List</a> 
+  <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" routerLink="/create-student" class="nav-link" >Add Student</a> 
+  
+  <div class="topnavbar-right">
+    <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" routerLink="/student-signup" class="nav-link" >Sign Up</a> 
+    <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" routerLink="/student-login" class="nav-link" >Login</a> 
+    <a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" routerLink="/feedback-form" class="nav-link" >Feedback</a> 
+    <<a class="btn btn-2" *ngIf="!loginService.isUserLoggedIn()" (click)="confirmLogout()"><i class="fa fa-sign-out"></i></a>
+
+    
+
+  </div>
+  
+    
+
+</div>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<nav class="navbar navbar-expand-sm bg-ligth navbar-dark">
+  <div class="logo">
+    <a  class="navbar-brand" href="#"><img [src]="'/assets/logo1.png'" title="Student Management" alt="logo">Student Management</a>
+    </div>
+  <ul class = "navbar-nav ms-auto">
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="home-page" routerLinkActive="" class="nav-link" title="Home" class="btn btn-outline-info" style="margin-left: 6px"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="about" routerLinkActive="" class="nav-link" title="About" class="btn btn-outline-warning" style="margin-left: 6px"><i class="fa fa-info-circle"></i>About</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="contact" routerLinkActive="active" class="nav-link" title="Contact" class="btn btn-outline-primary" style="margin-left: 6px"><i class="fa fa-phone"></i>Contact</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="services" routerLinkActive="" class="nav-link" title="Services" class="btn btn-outline-secondary" style="margin-left: 6px" ><i class="fa fa-user"></i>Services</a>
+    </li>
+    
+      <li class = "nav-item">
+        <a  *ngIf="loginService.isUserLoggedIn()" routerLink="students" title="Student list" class="nav-link" class="btn btn-outline-success" style="margin-left: 6px" ><i class="fa fa-list"></i>Student List</a>
+      </li>
+    <li class = "nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="create-student" title="Add Student" class="nav-link" class="btn btn-outline-secondary" style="margin-left: 6px" ><i class="fa fa-plus"></i>Add Student</a>
+      </li>
+    <li class = "nav-item">
+        <a  *ngIf="loginService.isUserLoggedIn()" routerLink="feedback-page" title="Feedback" class="nav-link" class="btn btn-outline-primary" style="margin-left: 6px" ><i class="fa fa-comments-o"></i>Feedback</a> 
+      </li>
+    <li class = "nav-item">
+       <a *ngIf="loginService.isUserLoggedIn()" routerLink="logout-page" title="Logout" class="nav-link" class="btn btn-outline-light" style="margin-left: 6px" ><i class="fa fa-sign-out" ></i>LogOut</a> 
+   </li>
+   <li class = "nav-item">
+      <a *ngIf="!loginService.isUserLoggedIn()" routerLink="login-page" title="Login" class="nav-link" class="btn btn-outline-success" style="margin-left: 6px"  ><i class="fa fa-sign-in"></i>Login</a> 
+    </li>
+  
+</ul>
+ 
+  </nav>
+
+
+<!--<h1 class="text-center"> {{title}} -->
+<div class = "container">
+  <router-outlet></router-outlet>
+</div>
+  

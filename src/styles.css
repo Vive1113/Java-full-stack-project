@@ -1,0 +1,16 @@
+
+
+body {
+    
+    background-image: url("C:\Users\VIVEGA\OneDrive\Desktop\Angular Project\fullstackproject\src\assets\sms9.jpg") ;
+   /* color:  rgba(241, 9, 9, 0.86);
+   font-size: 15px;
+    font-style: oblique;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #464646;*/
+    background-attachment: fixed;
+    }
+
+  
