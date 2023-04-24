@@ -90,8 +90,10 @@ public class Controller {
 		
 	}
 	
-	// update Student rest api
-	
+
+        /* By using post mapping annotation, transfer data from client to server in HTTP protocol.
+	 * POST carries request parameter in message body which makes it more secure
+	 * way of transferring data from client to server.*/
 	@PutMapping("/students/{id}")
 	public ResponseEntity<Student> updateStudent(@PathVariable int id, @RequestBody Student studentDetails){
 		Student student = repository.findById(id)
