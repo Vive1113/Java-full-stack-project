@@ -8,6 +8,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './update-student.component.html',
   styleUrls: ['./update-student.component.css']
 })
+
+//when updating, the data already stored in the respective id, is taken from Database 
+// and is displayed in respective fields. To update, data is entered in its respective input field,
+// and it should be updated in database from frontend through backend 
+//and is done by calling updateStudent Method of student service class.
 export class UpdateStudentComponent implements OnInit{
   studentName = '';
   standard = '';
