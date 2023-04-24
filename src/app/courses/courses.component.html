@@ -1,4 +1,6 @@
- <p>Courses</p>
+ 
+<!-- The topmost part of this page is the place where dropdown is located to select grade and view courses related to it -->
+<p>Courses</p>
 <!--<div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
       Grades
@@ -11,6 +13,9 @@
   </div> -->
 
 
+
+<!-- If a grade of the student selected is of lower grade, this corresponding subjects will be displayed
+   to select one among them. -->
 <div class="d-flex flex-row bd-highlight mb-3" id="lowerGrade" *ngIf = "checkLowerGrade()">
 <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -62,6 +67,10 @@
   </div>
 </div>
 
+
+
+<!-- If a grade of the student selected is of higher grade, this corresponding subjects will be displayed
+   to select one among them. -->
 <div class="d-flex flex-row bd-highlight mb-3" id="higherGrade" *ngIf = "!checkLowerGrade()">
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
