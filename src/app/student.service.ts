@@ -8,11 +8,12 @@ import { Student } from './student';
 @Injectable({
   providedIn: 'root'
 })
+// service class that will redirect to backend by respective methods' url.
 export class StudentService {
   // findByStandard(gradeValue: number) {
   //   throw new Error('Method not implemented.');
   // }
-
+ // front end will access this base url to connect to backend to perform crud operations.
   private baseURL = "http://localhost:8080/studentDetails/students";
 
   constructor(private httpClient: HttpClient) { }
