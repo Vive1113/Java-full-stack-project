@@ -1,19 +1,11 @@
+
+/* stylings for student-list component template */
 .input-group{
     width: 500px;
     justify-content: center;
     left: 93%;
 }
-/* .table{
-    color:black;
-  
-    background:linear-gradient(to right, #bd7ea88a 0%, rgb(183, 60, 148) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-style: inset;
-    box-shadow: 5px 5px 10px #fff;
 
-    
-} */
 .table thead{
     color:#1080db;
     font-style: oblique;
