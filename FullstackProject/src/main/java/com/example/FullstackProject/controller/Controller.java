@@ -110,7 +110,8 @@ public class Controller {
 		return ResponseEntity.ok(updatedStudent);
 	}
 	
-	// delete Student rest api
+	/* The Delete HTTP method is used to delete the resource and @DeleteMapping annotation for mapping 
+	 * HTTP DELETE requests onto specific handler methods.*/
 	@DeleteMapping("/students/{id}")
 	public ResponseEntity<Map<String, Boolean>> deleteStudent(@PathVariable int id){
 		Student student = repository.findById(id)
