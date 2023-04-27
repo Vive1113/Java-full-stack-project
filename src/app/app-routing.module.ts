@@ -33,7 +33,7 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'services', component: ServicesComponent},
-  {path: 'forgot-password', component: ForgotPasswordComponent,canActivate:[AuthGaurdService]},
+  {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'courses/:lowerGrade', component: CoursesComponent,canActivate:[AuthGaurdService]}
   
   
